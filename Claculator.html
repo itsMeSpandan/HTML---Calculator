@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-image: linear-gradient(to right bottom,red,blue);
+            min-width:500px;
+            min-height:850px;
+        }
+        table{
+            border-collapse: collapse;
+            margin-top:200px;
+        }
+        .inpar{
+            min-height:50px;
+            min-width:400px;
+            color:black;
+            font-family: "Century Gothic";
+            font-size: 30px;
+            text-align: right;
+        }
+        .button{
+            background-color: transparent;
+            min-width:100px;
+            min-height:50px;
+            color:white;
+            font-family: "Century Gothic";
+            font-size: 30px;
+            border-color: white;
+            border-bottom: 2px solid white;
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+            opacity: 0.7;
+        }
+        .clrbutton{
+            background-color: transparent;
+            min-width:200px;
+            min-height:50px;
+            color:white;
+            font-family: "Century Gothic";
+            font-size: 30px;
+            border-color: white;
+            border-bottom: 2px solid white;
+            border-top: transparent;
+            border-left: transparent;
+            border-right: transparent;
+        }
+        .eqbutton{
+            background-color: transparent;
+            min-width:100px;
+            min-height:110px;
+            color:white;
+            font-family: "Century Gothic";
+            font-size: 30px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        p{
+            color:transparent;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div id="divi">
+        <form>
+        <table align="center">
+            <tr><td colspan="4"><input type="text" class="inpar" id="display"></td></tr>
+            <tr><td><input type="button" value="/" class="button" id="divide" onclick="Show('/')"></button></td></td>
+                 <td><input type="button" value="*" class="button" id="multiply" onclick="Show('*')"></td>
+                 <td  colspan="2"><input type="reset" value="C" class="clrbutton"></td></tr>
+            <tr><td><input type="button" value="7" class="button" id="seven" onclick="Show('7')"></td>
+                <td><input type="button" value="8" class="button" id="eight" onclick="Show('8')"></td>
+                <td><input type="button" value="9" class="button" id="nine" onclick="Show('9')"></td>
+                <td><input type="button" value="+" class="button" id="plus" onclick="Show('+')"></td></tr>
+            <tr><td><input type="button" value="4" class="button" id="four" onclick="Show('4')"></td>
+                <td><input type="button" value="5" class="button" id="five" onclick="Show('3')"></td>
+                <td><input type="button" value="6" class="button" id="six" onclick="Show('6')"></td>
+                <td><input type="button" value="-" class="button" id="minus" onclick="Show('-')"></td></tr>
+            <tr><td><input type="button" value="1" class="button" id="one" onclick="Show('1')"></td>
+                <td><input type="button" value="2" class="button" id="two" onclick="Show('2')"></td>
+                <td><input type="button" value="3" class="button" id="three" onclick="Show('3')"></td>
+                <td rowspan="2"><input type="button" value="=" class="eqbutton" id="equal" onclick="Calc()"></td></tr>
+            <tr><td colspan="2"><input type="button" value="0" class="clrbutton" id="zero"  onclick="Show('0')"></td>
+                <td><input type="button" value="." class="button" id="point" onclick="Show('.')"></tr>
+        </table>
+    </form>
+    </div>
+</body>
+<script type="text/javascript" src="Calculator.js"></script>
+</html>
